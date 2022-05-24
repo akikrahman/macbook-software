@@ -36,13 +36,6 @@ developers(){
     echo "Cleaning up..."
     brew cleanup
 
-    #if the mode is to uninstall, ensure that the uninstall of parallels is done, as a special case.
-    if [ "$MODE" = "uninstall" ]
-    then
-        parallels_uninstall
-    else
-        echo "Finished the install"
-    fi
 }
 
 
