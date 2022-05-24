@@ -23,4 +23,5 @@ As the script runs it will prompt several times for admin password to proceed wi
 - docker
 - microsoft-teams
 - google-chrome
+- visual-studio-code
 
