@@ -24,6 +24,7 @@ developers(){
         google-chrome
         visual-studio-code
         intellij-idea-ce
+        postman
     )
     # Same Casks, but a Seperate list for uninstall casks, as the order may need to be different
     CASKS_UNINSTALL=(
@@ -32,6 +33,7 @@ developers(){
         google-chrome
         visual-studio-code
         intellij-idea-ce
+        postman
     )
     echo "$MODE-ing cask apps..."
     doBrewCaskInstallOrUninstall;
