@@ -6,13 +6,11 @@ developers(){
     PACKAGES=(
         git
         maven
-        spring-boot
     )
     # Same packages, but a Seperate list for uninstall packages, as the order may need to be different
     PACKAGES_UNINSTALL=(
         git
         maven
-        spring-boot
     )
     echo "$MODE-ing packages..."
     doBrewPackageInstallOrUninstall;
@@ -24,13 +22,14 @@ developers(){
         docker
         microsoft-teams
         google-chrome
-        parallels
+        visual-studio-code
     )
     # Same Casks, but a Seperate list for uninstall casks, as the order may need to be different
     CASKS_UNINSTALL=(
         docker
         microsoft-teams
         google-chrome
+        visual-studio-code
     )
     echo "$MODE-ing cask apps..."
     doBrewCaskInstallOrUninstall;
@@ -46,36 +45,6 @@ developers(){
     fi
 }
 
-#parallels uninstall special case
-parallels_uninstall(){
-
-        echo "Uninstalling parallels now...."        
-        brew uninstall --cask --force parallels
-        echo "Cleaning up..."
-        brew cleanup
-
-
-cat << "EOF2"
-The uninstall has now finished.....
-**** Steps to complete Post uninstall of parallels ****
-Please read the below...
-The uninstall of parallels should have completed. However, due to an anomoly with the way that parallels installs
-, the uninstall may or may not have reported an error. Please follow the instructions below carefully..
-you may have seen something like this at the end of the parallels uninstall...
---------------------------------------------------------------------------
-Cleaning up...
-Error: Permission denied @ apply2files - /usr/local/share/man/man8/prl_convert.8
-Steps to carry out to resolve any errors...
-------------------------------------------
-1. Try and check the health of brew. Try to install something that you havent already got, and see if brew complains. eg. try and install jq.
-   >brew install jq (if you already have jq installed, please do a brew uninstall jq followed by the install)
-2. If you dont see any errors, then you can exit now, as parallels would have uninstalled without causing any problems.
-3. However, if you did see an error, then brew tells you how to rectify this.
-4. Follow the instructions given by brew, if it is only changing the owner of the /usr/local/share/man/man8 directory, as this is fairly harmless thing to do.
-5. If it is merely changing the owner, please indeed follow the suggested solution by brew.
-6. If it is more complex, then please seek help from the authors of this script.
-EOF2
-}
 
 doBrewPackageInstallOrUninstall(){
     #Note: This function uses the following global variables to have been set before its call
