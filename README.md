@@ -20,7 +20,6 @@ As the script runs it will prompt several times for admin password to proceed wi
 - brew
 - git
 - maven
-- spring-boot
 - docker
 - microsoft-teams
 - google-chrome
