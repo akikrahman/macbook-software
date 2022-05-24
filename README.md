@@ -24,4 +24,5 @@ As the script runs it will prompt several times for admin password to proceed wi
 - microsoft-teams
 - google-chrome
 - visual-studio-code
+- intellij-idea-ce
 

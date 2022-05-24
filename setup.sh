@@ -23,6 +23,7 @@ developers(){
         microsoft-teams
         google-chrome
         visual-studio-code
+        intellij-idea-ce
     )
     # Same Casks, but a Seperate list for uninstall casks, as the order may need to be different
     CASKS_UNINSTALL=(
@@ -30,6 +31,7 @@ developers(){
         microsoft-teams
         google-chrome
         visual-studio-code
+        intellij-idea-ce
     )
     echo "$MODE-ing cask apps..."
     doBrewCaskInstallOrUninstall;
