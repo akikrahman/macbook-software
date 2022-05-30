@@ -7,8 +7,8 @@ Click the Launchpad (Rocket icon) and search for Terminal. Open a terminal – T
 Enter the following into the terminal:
  
 - Create folder called macbook-software % `mkdir macbook-software`
-- Navigate to the new folder % `copy https://github.com/akikrahman/macbook-software/blob/main/setup.sh script to the folder`
 - Navigate to the macbook-software folder % `cd macbook-software`
+- Copy the script to the new folder % `curl -o setup.sh https://github.com/akikrahman/macbook-software/blob/main/setup.sh`
 - Make it executable % `chmod +x setup.sh`
 - Run the script % `./setup.sh`
  

@@ -9,8 +9,8 @@ developers(){
     )
     # Same packages, but a Seperate list for uninstall packages, as the order may need to be different
     PACKAGES_UNINSTALL=(
-        git
         maven
+        git
     )
     echo "$MODE-ing packages..."
     doBrewPackageInstallOrUninstall;
@@ -47,7 +47,7 @@ doBrewPackageInstallOrUninstall(){
     #Note: This function uses the following global variables to have been set before its call
     # MODE               : install or uninstall
     # PACKAGES           : The list of packages that are going to be installed (if this is an install)
-    # PACKAGES_UNINSTALL : The list of packages that are going to be installed (if this is an install)
+    # PACKAGES_UNINSTALL : The list of packages that are going to be uninstalled (if this is an uninstall)
     case "$MODE" in
         'install')
                 brew install ${PACKAGES[@]}
@@ -68,7 +68,7 @@ doBrewCaskInstallOrUninstall(){
     #Note: This function uses the following global variables to have been set before its call
     # MODE               : install or uninstall
     # CASKS              : The list of casks that are going to be installed (if this is an install)
-    # CASKS_UNINSTALL    : The list of casks that are going to be installed (if this is an install)
+    # CASKS_UNINSTALL    : The list of casks that are going to be uninstalled (if this is an uninstall)
     case "$MODE" in
         'install')
                 brew install --cask --force ${CASKS[@]}
@@ -108,14 +108,14 @@ select opt in "${options[@]}"
 do
     case $opt in
         "Install Developer Tools")
-            echo "you chose to install tools for $opt - $REPLY"
+            echo "you chose Option: $opt - $REPLY"
             MODE=install
             install_homebrew
             developers
             break
             ;;
         "*UNINSTALL Developer Tools")
-            echo "you chose to Uninstall tools for $opt - $REPLY"
+            echo "you chose Option: $opt - $REPLY"
             MODE=uninstall
             #check that folks are sure whether they wish to uninstall....
             echo -n "Answer \"yes\" if you are sure you wish to uninstall..."
@@ -131,6 +131,7 @@ do
             break
             ;;
         "Quit")
+            echo "Bailing out..."
             break
             ;;
         *) echo "invalid option $REPLY";;
