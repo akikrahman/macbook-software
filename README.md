@@ -8,7 +8,7 @@ Enter the following into the terminal:
  
 - Create folder called macbook-software % `mkdir macbook-software`
 - Navigate to the macbook-software folder % `cd macbook-software`
-- Copy the script to the new folder % `curl -o setup.sh https://github.com/akikrahman/macbook-software/blob/main/setup.sh`
+- Copy the script to the new folder % `curl -o setup.sh https://raw.githubusercontent.com/akikrahman/macbook-software/main/setup.sh`
 - Make it executable % `chmod +x setup.sh`
 - Run the script % `./setup.sh`
  
