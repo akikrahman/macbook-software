@@ -19,7 +19,6 @@ developers(){
 
     #now install casks
     CASKS=(
-        docker
         microsoft-teams
         google-chrome
         visual-studio-code
@@ -28,7 +27,6 @@ developers(){
     )
     # Same Casks, but a Seperate list for uninstall casks, as the order may need to be different
     CASKS_UNINSTALL=(
-        docker
         microsoft-teams
         google-chrome
         visual-studio-code
