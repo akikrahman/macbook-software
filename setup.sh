@@ -22,7 +22,6 @@ developers(){
         microsoft-teams
         google-chrome
         visual-studio-code
-        intellij-idea-ce
         postman
     )
     # Same Casks, but a Seperate list for uninstall casks, as the order may need to be different
@@ -30,7 +29,6 @@ developers(){
         microsoft-teams
         google-chrome
         visual-studio-code
-        intellij-idea-ce
         postman
     )
     echo "$MODE-ing cask apps..."
