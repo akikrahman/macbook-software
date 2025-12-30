@@ -7,7 +7,7 @@ developers(){
         git
         maven
     )
-    # Same packages, but a Seperate list for uninstall packages, as the order may need to be different
+    # Same packages, but a Separate list for uninstall packages, as the order may need to be different
     PACKAGES_UNINSTALL=(
         maven
         git
@@ -19,14 +19,12 @@ developers(){
 
     #now install casks
     CASKS=(
-        microsoft-teams
         google-chrome
         visual-studio-code
         postman
     )
-    # Same Casks, but a Seperate list for uninstall casks, as the order may need to be different
+    # Same Casks, but a Separate list for uninstall casks, as the order may need to be different
     CASKS_UNINSTALL=(
-        microsoft-teams
         google-chrome
         visual-studio-code
         postman
